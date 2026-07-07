@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LineCta from '../components/LineCta.astro';
+import { SITE } from '../consts';
+import '../styles/global.css';
+const { post } = Astro.props;
+const d = post.data;
+---
+<html lang={SITE.lang}>
+<head>
+  <BaseHead title={d.title} description={d.description} type="article" pubDate={d.pubDate} author={d.author} image={d.heroImage?.src} />
+</head>
+<body>
+  <Header />
+  <main class="wrap">
+    <article class="post">
+      <p class="pillar">{d.pillar}</p>
+      <h1>{d.title}</h1>
+      <p class="post__meta">{d.pubDate.toLocaleDateString('zh-TW')}・{d.author}</p>
+      {d.heroImage && <img class="post__hero" src={d.heroImage.src} alt={d.heroAlt} />}
+      <div class="prose"><slot /></div>
+      {d.lineCta && <LineCta />}
+    </article>
+  </main>
+  <Footer />
+</body>
+</html>

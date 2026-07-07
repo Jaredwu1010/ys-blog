@@ -1,0 +1,36 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import { SITE } from '../consts';
+import '../styles/global.css';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => !import.meta.env.PROD || p.data.draft !== true)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<html lang={SITE.lang}>
+<head>
+  <BaseHead title={SITE.title} description={SITE.description} />
+</head>
+<body>
+  <Header />
+  <main class="wrap">
+    <p class="lead">{SITE.description}</p>
+    <ul class="post-list">
+      {posts.map((p) => (
+        <li>
+          <a href={`/posts/${p.id}/`}>
+            <span class="pillar">{p.data.pillar}</span>
+            <h2>{p.data.title}</h2>
+            <p>{p.data.description}</p>
+            <time>{p.data.pubDate.toLocaleDateString('zh-TW')}</time>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</body>
+</html>

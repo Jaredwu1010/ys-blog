@@ -1,0 +1,28 @@
+# ⚠️ 路線 B（Cloudflare Git 直連）不需要這個檔，這裡已設為「休眠」（只能手動觸發）。
+# 若日後想改用 GitHub Actions 自訂 CI（路線 A），把下面改回 push 觸發，
+# 並在 repo 設定 CLOUDFLARE_API_TOKEN 與 CLOUDFLARE_ACCOUNT_ID 兩個 secret。
+name: Build and Deploy (Cloudflare Pages) — DISABLED
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=ys-blog --branch=main
