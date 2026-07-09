@@ -7,6 +7,8 @@ keywords: ["匹克球拍 推薦", "匹克球拍 怎麼挑", "新手 球拍"]
 author: YS 躍升匹克球學院
 lineCta: true
 draft: false
+heroImage: ./choose-first-paddle-hero.webp
+heroAlt: 新手第一支匹克球拍怎麼挑？5 個選拍重點
 ---
 
 站在琳瑯滿目的球拍前，是不是完全不知道從何挑起？別擔心，新手選第一支拍其實不用想太複雜，掌握下面 5 個重點就夠了。

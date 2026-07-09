@@ -7,6 +7,8 @@ keywords: ["匹克球是什麼", "匹克球 新手", "匹克球 入門"]
 author: YS 躍升匹克球學院
 lineCta: true
 draft: false
+heroImage: ./pickleball-beginner-faq-hero.webp
+heroAlt: 匹克球是什麼？新手最常問的問題一次解答
 ---
 
 最近常聽到「匹克球」，但它到底是什麼？跟網球、羽球有什麼不一樣？如果你也有這些疑問，這篇幫你把新手最常問的問題一次講清楚。

@@ -7,6 +7,8 @@ keywords: ["匹克球 受傷", "運動傷害 預防", "匹克球 安全"]
 author: YS 躍升匹克球學院
 lineCta: true
 draft: false
+heroImage: ./pickleball-injury-prevention-hero.webp
+heroAlt: 打匹克球會受傷嗎？常見傷害與預防
 ---
 
 匹克球雖然是相對溫和、好上手的運動，但它畢竟仍有跑動、急停與轉身，若沒有做好準備，還是可能受傷。這篇幫你了解常見的狀況與怎麼預防，讓你打得開心也打得安全。

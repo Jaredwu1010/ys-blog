@@ -7,6 +7,8 @@ keywords: ["匹克球 dink", "dink 教學", "匹克球 技術"]
 author: YS 躍升匹克球學院
 lineCta: true
 draft: false
+heroImage: ./what-is-dink-hero.webp
+heroAlt: 什麼是 dink？匹克球最關鍵的入門技術
 ---
 
 看高手打匹克球，你會發現他們常常在網前「輕輕把球撥過去」，一來一往好幾拍。那個動作就叫 dink，是匹克球裡最關鍵、卻最容易被新手忽略的技術。
